@@ -26,7 +26,7 @@ To get this project up and running locally, you must already have npm and nodejs
 - ``$ npm start``
 ```
 
-<!-- - [Live Version](https://bookstore-rrdx.netlify.app/) -->
+- [Live Version](https://catalogue-of-recipess.netlify.app/)
 
 <!--### Run Tests
  Tests for modules written using **Jest** and **React Testing Library**
