@@ -29,9 +29,9 @@ class Details extends React.Component {
       return <h1>Please wait...</h1>;
     }
     /* eslint-enable */
-    const {
+    const [
       meal, type, description, name,
-    } = this.state;
+    ] = this.state;
 
     return (
       <div className="details">
