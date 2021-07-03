@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from '@reach/router';
+/* eslint-disable */
 
-const Pets = (name, animal, breed, media, location, id) => {
+const Pets = ({
+  name, animal, breed, media, location, id,
+}) => {
   let data = '';
-  if (media.length) {
+  if (media.length !== 0) {
     data = media[0].small;
   }
 
   return (
-    <Link className="pet">
+    <Link to={`/Details/${id}`} className="pet">
       <div className="image-container">
         <img src={data} alt={name} />
       </div>
@@ -19,5 +22,6 @@ const Pets = (name, animal, breed, media, location, id) => {
     </Link>
   );
 };
+/* eslint-enable */
 
 export default Pets;
