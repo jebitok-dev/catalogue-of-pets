@@ -1,0 +1,23 @@
+import React from 'react';
+import { Link } from '@reach/router';
+
+const Pets = (name, animal, breed, media, location, id) => {
+  let data = '';
+  if (media.length) {
+    data = media[0].small;
+  }
+
+  return (
+    <Link className="pet">
+      <div className="image-container">
+        <img src={data} alt={name} />
+      </div>
+      <div className="info">
+        <h1>{name}</h1>
+        <h2>{`${animal}  - ${breed} - ${location}`}</h2>
+      </div>
+    </Link>
+  );
+};
+
+export default Pets;
