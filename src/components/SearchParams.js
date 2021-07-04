@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 /* eslint-disable */
 import pet, { ANIMALS } from '@frontendmasters/pet';
-import Dropdown from '../containers/Dropdown';
+import Dropdown from './Dropdown';
 import Results from './Results';
 
 const SearchParams = () => {

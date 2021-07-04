@@ -7,10 +7,10 @@ export const addPets = (pets) => ({
 
 export const fetchPets = (animals) => (dispatch) => dispatch(addPets(animals || []));
 
-export const filterAnimal = (type) => ({
+export const filterAnimal = (animal) => ({
   type: 'FILTER_ANIMAL',
   payload: {
-    type,
+    animal,
   },
 });
 
