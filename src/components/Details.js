@@ -15,7 +15,7 @@ const Details = ({ id }) => {
   useEffect(async () => {
     await pet.animal
       .show(id)
-      .then((data) => data.data);
+      .then(({animal}) => {
 
     setAnimal(animal.type);
     setName(animal.name);
@@ -24,6 +24,7 @@ const Details = ({ id }) => {
     setLocation(`${animal.contact.address.city}, ${animal.contact.address.state}`);
     setDescription(animal.description);
     setLoading(false);
+      });
   }, [id]);
 
   if (loading) {

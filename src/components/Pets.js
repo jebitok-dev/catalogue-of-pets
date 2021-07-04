@@ -6,7 +6,7 @@ const Pets = ({
   name, animal, breed, media, location, id,
 }) => {
   let data = '';
-  // if (media.length !== 0) {
+  // if (media.length) {
   //   data = media[0].small;
   // }
 
