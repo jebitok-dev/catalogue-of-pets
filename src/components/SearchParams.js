@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+/* eslint-disable */
 import pet, { ANIMALS } from '@frontendmasters/pet';
 import Dropdown from '../containers/Dropdown';
 import Results from './Results';
@@ -6,7 +7,8 @@ import Results from './Results';
 const SearchParams = () => {
   const [location, updateLocation] = useState('Seattle, WA');
   const [breeds, updateBreeds] = useState([]);
-  const [animal, AnimalDropDown] = Dropdown('Breed', '', breeds);
+  const [animal, AnimalDropDown] = Dropdown('Animal', 'dog', ANIMALS);
+  const [breed, BreedDropDown, updateBreed] = Dropdown('Breed', '', breeds);
   const [Pets, setPets] = useState([]);
 
   async function requestPets() {

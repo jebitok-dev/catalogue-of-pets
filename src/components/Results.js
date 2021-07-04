@@ -1,6 +1,6 @@
 import React from 'react';
 import Pets from './Pets';
-
+/* eslint-disable */
 const Results = ({ pets }) => (
   <div className="search">
     {!pets.length ? (

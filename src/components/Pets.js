@@ -6,9 +6,9 @@ const Pets = ({
   name, animal, breed, media, location, id,
 }) => {
   let data = '';
-  if (media.length !== 0) {
-    data = media[0].small;
-  }
+  // if (media.length !== 0) {
+  //   data = media[0].small;
+  // }
 
   return (
     <Link to={`/Details/${id}`} className="pet">
