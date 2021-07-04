@@ -1,8 +1,19 @@
+import { Router, Link } from '@reach/router';
 import Pets from './Pets';
+import Details from './Details';
+import SearchParams from './SearchParams';
 
 const App = () => (
-  <div className="App">
-    <h1>Adopt Me</h1>
+  <div>
+    <h1>
+      <Link to="/">
+        Adopt Pets!
+      </Link>
+    </h1>
+    <Router>
+      <SearchParams path="/" />
+      <Details path="/details/:id" />
+    </Router>
     <Pets />
   </div>
 );
