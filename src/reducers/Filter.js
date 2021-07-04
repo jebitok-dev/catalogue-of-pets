@@ -1,4 +1,4 @@
-const filterAnimal = (state = 'All', action) => {
+const Filter = (state = 'All', action) => {
   if (action.type === 'FILTER_ANIMAL') {
     return { state, type: action.payload.type };
   }
@@ -10,4 +10,4 @@ const filterAnimal = (state = 'All', action) => {
   return state;
 };
 
-export default filterAnimal;
+export default Filter;
