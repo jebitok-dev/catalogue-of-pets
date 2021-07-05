@@ -1,15 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
-/* eslint-disable */
 
 const Pets = ({
   name, animal, breed, media, location, id,
 }) => {
   let data = '';
-  // if (media.length) {
-  //   data = media[0].small;
-  // }
-
+  if (media.length !== 0) {
+    data = media[0].small;
+  }
   return (
     <Link to={`/Details/${id}`} className="pet">
       <div className="image-container">
@@ -22,6 +21,23 @@ const Pets = ({
     </Link>
   );
 };
-/* eslint-enable */
+
+Pets.propTypes = {
+  animal: PropTypes.string,
+  breed: PropTypes.string,
+  location: PropTypes.string,
+  name: PropTypes.string,
+  media: PropTypes.array, // eslint-disable-line
+  id: PropTypes.number,
+};
+
+Pets.defaultProps = {
+  animal: '',
+  breed: '',
+  location: '',
+  name: '',
+  media: [],
+  id: '',
+};
 
 export default Pets;
