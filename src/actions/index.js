@@ -8,7 +8,7 @@ export const addPets = (pets) => ({
 export const fetchPets = (animals) => (dispatch) => dispatch(addPets(animals || []));
 
 export const filterAnimal = (animal) => ({
-  type: 'FILTER_ANIMAL',
+  type: 'FILTER_TYPE',
   payload: {
     animal,
   },
@@ -18,5 +18,12 @@ export const filterBreed = (breed) => ({
   type: 'FILTER_BREED',
   payload: {
     breed,
+  },
+});
+
+export const filterLocation = (location) => ({
+  type: 'FILTER_LOCATION',
+  payload: {
+    location,
   },
 });
