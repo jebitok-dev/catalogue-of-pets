@@ -37,7 +37,7 @@ Pets.defaultProps = {
   location: '',
   name: '',
   media: [],
-  id: '',
+  id: 1,
 };
 
 export default Pets;

@@ -8,15 +8,15 @@ const Results = ({ pets }) => (
     ) : (
       pets.map((pet) => (
         <Pets
+          key={pet.id}
           id={pet.id}
           animal={pet.name}
-          key={pet.id}
           name={pet.breeds.primary}
           media={pet.photos}
           location={`${pet.contact.address.city},
                                 ${pet.contact.address.state}
                             `}
-          description={pet.description}
+          // description={pet.description}
         />
       ))
     )}
