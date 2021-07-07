@@ -7,7 +7,7 @@ const Filter = (state = 'All', action) => {
     return { state, breed: action.payload.breed };
   }
 
-  if (action.type === 'FILTER_TYPE') {
+  if (action.type === 'FILTER_ANIMAL') {
     return { state, type: action.payload.animal };
   }
 

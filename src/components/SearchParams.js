@@ -31,9 +31,11 @@ const SearchParams = () => {
   }, [animal, updateBreed, updateBreeds]);
 
   return (
-    <div className="search-params">
+    <div className="search-params" data-testid="search-params-id">
       {name}
-      <form onSubmit={(e) => {
+      <form 
+        data-testid="search-params-form"
+        onSubmit={(e) => {
         e.preventDefault();
         requestPets();
       }}

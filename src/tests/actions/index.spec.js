@@ -53,12 +53,12 @@ test('should return filterBreed', () => {
 });
 
 test('should return filterAnimal', () => {
-  const type = 'Dog';
-  const action = filterAnimal(type);
+  const animal = 'Dog';
+  const action = filterAnimal(animal);
   expect(action).toEqual({
     type: 'FILTER_TYPE',
     payload: {
-      type,
+      animal,
     },
   });
 });
