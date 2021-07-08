@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 /* eslint-disable */
-import pet, { ANIMALS } from '@frontendmasters/pet';
+import { ANIMALS } from '@frontendmasters/pet';
 import Dropdown from './Dropdown';
 import Results from './Results';
+import client from '../helpers/Api';
 
 const SearchParams = () => {
   const [location, updateLocation] = useState('Seattle, WA');
@@ -12,7 +13,8 @@ const SearchParams = () => {
   const [Pets, setPets] = useState([]);
 
   async function requestPets() {
-    const { animals } = await pet.animals({
+    const { animals } = await client.animal
+    .search ({
       location,
       breed,
       type: animal,
@@ -24,7 +26,7 @@ const SearchParams = () => {
   useEffect(() => {
     updateBreeds([]);
     updateBreed('');
-    pet.breeds(animal).then(({ breeds }) => {
+    client.breeds(animal).then(({ breeds }) => {
       const breedItems = breeds.map(({ name }) => name);
       updateBreeds(breedItems);
     });

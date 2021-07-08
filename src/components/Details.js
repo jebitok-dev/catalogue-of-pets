@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import pet from '@frontendmasters/pet';
+import petFinder from '../helpers/Api';
 
 /* eslint-disable */
 const Details = ({ id }) => {
@@ -13,7 +13,7 @@ const Details = ({ id }) => {
   const [description, setDescription] = useState('');
 
   useEffect(async () => {
-    await pet.animal
+    await petFinder.animal
       .show(id)
       .then(({animal}) => {
 
