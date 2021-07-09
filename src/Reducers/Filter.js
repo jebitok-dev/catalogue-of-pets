@@ -1,4 +1,4 @@
-const filterPet = (state = 'All', action) => {
+const filterPets = (state = 'All', action) => {
   if (action.type === 'FILTER_PETS') {
     return { state, breed: action.payload.breed };
   }
@@ -14,4 +14,4 @@ const filterPet = (state = 'All', action) => {
   return state;
 };
 
-export default filterPet;
+export default filterPets;
