@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { navigate } from '@reach/router';
-import petFinder from 'pet-finder-api';
+import petFinder from '../Helpers/Api';
 
 const Details = ({ id }) => {
   const [loading, setLoading] = useState(true);
