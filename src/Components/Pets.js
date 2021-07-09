@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '@reach/router';
+import { Link } from '@reach/router';
 
 const Pets = ({ id, media, name }) => {
   let data = '';
@@ -16,7 +16,6 @@ const Pets = ({ id, media, name }) => {
       </div>
       <div className="info">
         <h1>{name}</h1>
-        <h1>{`${animal} - ${breed} - ${location}`}</h1>
       </div>
     </Link>
   );

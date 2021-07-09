@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { navigate } from '@reach/router';
 import petFinder from '../Helpers/Api';
 
+/* eslint-disable */
 const Details = ({ id }) => {
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState('');
@@ -42,9 +43,12 @@ const Details = ({ id }) => {
       <div>
         <h1>{name}</h1>
         <h2>{`${animal} - ${breed} - ${location}`}</h2>
-        <button>
+        <button type="button" onClick={adopt}>
           Adopt
           {name}
+        </button>
+        <button type="button" onClick={home}>
+          Back
         </button>
         <p>{description}</p>
       </div>
