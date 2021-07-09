@@ -30,7 +30,7 @@ Pets.propTypes = {
 Pets.defaultProps = {
   name: '',
   media: [],
-  id: '',
+  id: 1,
 };
 
 export default Pets;
