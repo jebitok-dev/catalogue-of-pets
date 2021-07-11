@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider, createStore } from 'react-redux';
-
-import { Router } from './Routes/Route';
+import { applyMiddleware, createStore } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import Router from './Routes/Route';
 import './index.css';
 import reducer from './Reducers';
-import App from './Components/App';
 
-ReactDOM.render(
+const store = createStore(reducer, applyMiddleware(thunk));
+
+const PetApp = () => (
   <React.StrictMode>
     <Provider store={store}>
       <Router />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root'),
+  </React.StrictMode>
 );
+
+ReactDOM.render(<PetApp />, document.getElementById('root'));

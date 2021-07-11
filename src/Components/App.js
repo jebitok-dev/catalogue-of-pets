@@ -1,5 +1,5 @@
 import '../styles/App.css';
-import PetContainer from './Pets';
+import PetContainer from '../Containers/SearchParamContainer';
 
 function App() {
   return (

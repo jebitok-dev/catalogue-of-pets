@@ -5,7 +5,9 @@ export const addPets = (pets) => ({
   },
 });
 
-export const fetchPets = (animals) => (dispatch) => dispatch(addPets(animals || []));
+export const fetchPets = (animals) => (dispatch) => {
+  dispatch(addPets(animals || []));
+};
 
 export const filterPets = (breed) => ({
   type: 'FILTER_PETS',
