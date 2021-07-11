@@ -63,11 +63,14 @@ const SearchParams = ({
   }, []);
 
   return (
-    <div className="search-params">
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        requestPets();
-      }}
+    <div className="search-params" data-testid="search-params-id">
+      <form
+        data-testid="search-params-form"
+        className="search-params-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          requestPets();
+        }}
       >
         <label htmlFor="animal">
           Animal
