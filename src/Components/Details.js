@@ -31,7 +31,7 @@ const Details = ({ id }) => {
 
   if (loading) {
     return (
-      <h1>Loading</h1>
+      <h1 className="loading" data-testid="details-loading">Loading</h1>
     );
   }
 
