@@ -33,6 +33,9 @@ To get this project up and running locally, you must already have npm and nodejs
 ```
 
 - [Live Version](https://catalogue-of-pets.netlify.app/)
+- [React-Part Video](https://www.loom.com/share/90e8c180e034429aa44677fd5dbb941b)
+- [Redux/ React-Redux Part Video](https://www.loom.com/share/bb9dd88c7443446b934fb9f1bc51648a)
+- [Live Version Video](https://www.loom.com/share/9411e08943f943b6b45ad282d69dca24)
 
 ### Run Tests
  Tests for modules written using **Jest** and **React Testing Library**
