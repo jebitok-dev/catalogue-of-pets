@@ -1,18 +1,17 @@
 import React from 'react';
-import { Router } from '@reach/router';
+import { Link, Router } from '@reach/router';
 import Details from '../Components/Details';
 import App from '../Components/App';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
 
 const Route = () => (
   <div className="main-container">
-    <Navbar />
+    <h1>
+      <Link to="/">Adopt Pets!</Link>
+    </h1>
     <Router>
       <App path="/" />
       <Details path="/details/:id" />
     </Router>
-    <Footer />
   </div>
 );
 
