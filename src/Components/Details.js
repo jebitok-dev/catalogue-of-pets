@@ -59,7 +59,7 @@ const Details = ({ id }) => {
         </button>
         <br />
         <button type="button" onClick={home}>
-          Back
+          Back to Home Page
         </button>
       </div>
     </div>
