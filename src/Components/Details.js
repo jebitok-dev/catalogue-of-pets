@@ -35,22 +35,32 @@ const Details = ({ id }) => {
     );
   }
 
+  let data = 'http://placecorgi.com/300/300';
+
+  if (media.length !== 0) {
+    data = media[0].large;
+  }
+
   const home = () => navigate('/');
   const adopt = () => navigate(url);
 
   return (
     <div className="details">
       <div>
+        <div className="image-container">
+          <img src={data} alt="" />
+        </div>
         <h1>{name}</h1>
         <h2>{`${animal} - ${breed} - ${location}`}</h2>
+        <p>{description}</p>
         <button type="button" onClick={adopt}>
           Adopt
           {name}
         </button>
+        <br />
         <button type="button" onClick={home}>
           Back
         </button>
-        <p>{description}</p>
       </div>
     </div>
   );
