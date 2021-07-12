@@ -1,14 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # catalogue-of-recipes
-Building a single page application(SPA) that has two pages i.e list of recipes and details about specific recipe. User can filter through the list and select favorite Recipe. 
+Building a single page application(SPA) that has two pages i.e list of pets and details about specific pet i.e Name, Breed, Location, and Description. User can filter through the list by animal type, gender and size and then select favorite Pet. 
 
 <!-- ![screenshot](./src/images/Screenshot.png) -->
 ## Built With
-
+- petFinder API
+- Pet API by Front-End Masters 
 - React
 - Redux Toolkit
-- Menu DB
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ To get this project up and running locally, you must already have npm and nodejs
 - ``$ npm start``
 ```
 
-- [Live Version](https://catalogue-of-recipess.netlify.app/)
+- [Live Version](https://catalogue-of-pets.netlify.app/)
 
 <!--### Run Tests
  Tests for modules written using **Jest** and **React Testing Library**
