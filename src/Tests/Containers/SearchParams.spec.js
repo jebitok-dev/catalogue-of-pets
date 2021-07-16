@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SearchParams from '../../Components/SearchParams';
+import SearchParams from '../../Containers/SearchParams';
 
 test('should render the SearchPet Component', async () => {
   const { getByTestId } = render(<SearchParams />);

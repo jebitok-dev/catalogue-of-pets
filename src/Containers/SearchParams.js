@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ANIMALS } from '@frontendmasters/pet';
-import Results from './Results';
+import Results from '../Components/Results';
 import petFinder from '../Helpers/Api';
 
 const SearchParams = ({
@@ -74,10 +74,16 @@ const SearchParams = ({
       >
         <label htmlFor="animal">
           Animal
-          <select value={petFilter} onChange={onFilterChange}>
-            <option>Select</option>
+          <select
+            value={petFilter}
+            onChange={onFilterChange}
+          >
+            <option disabled>Select</option>
             {ANIMALS.map((option) => (
-              <option value={option} key={option}>
+              <option
+                value={option}
+                key={option}
+              >
                 {capitalize(option)}
               </option>
             ))}
@@ -85,10 +91,16 @@ const SearchParams = ({
         </label>
         <label htmlFor="size">
           Size
-          <select value={petSize} onChange={onSizeChange}>
-            <option>Select</option>
+          <select
+            value={petSize}
+            onChange={onSizeChange}
+          >
+            <option disabled>Select</option>
             {sizes.map((option) => (
-              <option value={option} key={option}>
+              <option
+                value={option}
+                key={option}
+              >
                 {option}
               </option>
             ))}
@@ -96,10 +108,16 @@ const SearchParams = ({
         </label>
         <label htmlFor="gender">
           Gender
-          <select value={petGender} onChange={onGenderChange}>
-            <option>Select</option>
+          <select
+            value={petGender}
+            onChange={onGenderChange}
+          >
+            <option disabled>Select</option>
             {genders.map((option) => (
-              <option value={option} key={option}>
+              <option
+                value={option}
+                key={option}
+              >
                 {option}
               </option>
             ))}

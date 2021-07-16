@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { navigate } from '@reach/router';
 import petFinder from '../Helpers/Api';
 
-/* eslint-disable */
 const Details = ({ id }) => {
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState('');
@@ -31,7 +30,7 @@ const Details = ({ id }) => {
 
   if (loading) {
     return (
-      <h1 className="loading" data-testid="details-loading">Loading</h1>
+      <h1 className="space" data-testid="details-loading">Loading...</h1>
     );
   }
 
@@ -46,16 +45,18 @@ const Details = ({ id }) => {
 
   return (
     <div className="details">
-      <div>
-        <div className="image-container">
-          <img src={data} alt="" />
+      <div className="image-container">
+        <img src={data} alt="" />
+      </div>
+      <div className="details-section">
+        <div>
+          <h1>{name}</h1>
+          <h2>{`${animal} - ${breed} - ${location}`}</h2>
+          <p>{description}</p>
         </div>
-        <h1>{name}</h1>
-        <h2>{`${animal} - ${breed} - ${location}`}</h2>
-        <p>{description}</p>
         <button type="button" onClick={adopt}>
           Adopt
-          {name}
+          <span>{name}</span>
         </button>
         <br />
         <button type="button" onClick={home}>

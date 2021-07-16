@@ -11,11 +11,13 @@ const Pets = ({ id, media, name }) => {
 
   return (
     <Link to={`/details/${id}`}>
-      <div className="image-container">
-        <img src={data} alt={name} />
-      </div>
-      <div className="info">
-        <h1>{name}</h1>
+      <div className="card">
+        <div className="image-container">
+          <img src={data} alt={name} />
+          <div className="info">
+            <h1>{name}</h1>
+          </div>
+        </div>
       </div>
     </Link>
   );

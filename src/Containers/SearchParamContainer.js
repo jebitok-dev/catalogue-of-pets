@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import {
   fetchPets, filterPets, filterSize, filterGender,
 } from '../Actions/index';
-import SearchParams from '../Components/SearchParams';
+import SearchParams from './SearchParams';
 
 const mapStateToProps = (state) => ({
   pets: state.pets,
