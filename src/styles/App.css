@@ -23,15 +23,6 @@ body {
   margin: 0 auto;
 }
 
-/* .search-params form {
-  background-color: var(--yellow);
-  width: 360px;
-  margin: 0 25px 0 0;
-  padding: 35px 15px 15px 15px;
-  border-radius: 5px;
-  float: left;
-} */
-
 .search-params form {
   background-color: var(--yellow);
   max-width: 1200px;
@@ -80,11 +71,6 @@ body {
   border-bottom: var(--yellow1);
 }
 
-/* .pet img {
-  width: 100px;
-  min-width: 100px;
-} */
-
 .info {
   float: left;
   width: 80%;
@@ -130,6 +116,11 @@ img {
   text-align: center;
   color: var(--red);
   font-size: 35px;
+}
+
+.details  p {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 header > a,
@@ -200,38 +191,6 @@ header {
   font-weight: 600;
 }
 
-/* .carousel {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 400px;
-  margin-top: 8px;
-}
-
-.carousel > img {
-  max-width: 45%;
-  max-height: 400px;
-}
-
-.carousel-smaller {
-  width: 50%;
-}
-
-.carousel-smaller > img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 15px;
-  cursor: pointer;
-  border: 2px solid #333;
-}
-
-.carousel-smaller > img.active {
-  border-color: #ad343e;
-  opacity: 0.6;
-} */
-
 .search-params label {
   padding: 10px;
   margin-left: 15px;
@@ -243,8 +202,8 @@ header {
   font-size: 18px;
 }
 
-.search-params button
-/* .details button  */
+.search-params button,
+.details button 
  {
   background-color: #ad343e;
   padding: 10px;
@@ -254,15 +213,7 @@ header {
   border: #333 1px solid;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.details button {
-  color: white;
-  background-color: #ad343e;
-  padding: 10px;
-  margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 20px;
 }
 
 .search-params button:hover {

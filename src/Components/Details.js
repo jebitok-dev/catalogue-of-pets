@@ -49,11 +49,9 @@ const Details = ({ id }) => {
         <img src={data} alt="" />
       </div>
       <div className="details-section">
-        <div>
-          <h1>{name}</h1>
-          <h2>{`${animal} - ${breed} - ${location}`}</h2>
-          <p>{description}</p>
-        </div>
+        <h1>{name}</h1>
+        <h2>{`${animal} - ${breed} - ${location}`}</h2>
+        <p>{description}</p>
         <button type="button" onClick={adopt}>
           Adopt
           <span>{name}</span>

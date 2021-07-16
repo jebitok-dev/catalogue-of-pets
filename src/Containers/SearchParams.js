@@ -52,9 +52,9 @@ const SearchParams = ({
   useEffect(async () => {
     const { animals } = await petFinder.animal
       .search({
-        type: 'Dog',
+        type: 'Bird',
+        size: 'Small',
         gender: 'Male',
-        size: 'Medium',
       })
       .then((data) => data.data);
 
@@ -78,7 +78,7 @@ const SearchParams = ({
             value={petFilter}
             onChange={onFilterChange}
           >
-            <option>Select</option>
+            <option>Bird</option>
             {ANIMALS.map((option) => (
               <option
                 value={option}
@@ -95,7 +95,7 @@ const SearchParams = ({
             value={petSize}
             onChange={onSizeChange}
           >
-            <option>Select</option>
+            <option>Small</option>
             {sizes.map((option) => (
               <option
                 value={option}
@@ -112,7 +112,7 @@ const SearchParams = ({
             value={petGender}
             onChange={onGenderChange}
           >
-            <option>Select</option>
+            <option>Male</option>
             {genders.map((option) => (
               <option
                 value={option}
