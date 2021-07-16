@@ -78,7 +78,7 @@ const SearchParams = ({
             value={petFilter}
             onChange={onFilterChange}
           >
-            <option>Bird</option>
+            <option>Select</option>
             {ANIMALS.map((option) => (
               <option
                 value={option}
@@ -95,7 +95,7 @@ const SearchParams = ({
             value={petSize}
             onChange={onSizeChange}
           >
-            <option>Small</option>
+            <option>Select</option>
             {sizes.map((option) => (
               <option
                 value={option}
@@ -112,7 +112,7 @@ const SearchParams = ({
             value={petGender}
             onChange={onGenderChange}
           >
-            <option>Male</option>
+            <option>Select</option>
             {genders.map((option) => (
               <option
                 value={option}

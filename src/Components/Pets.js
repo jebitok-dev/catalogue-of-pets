@@ -14,9 +14,7 @@ const Pets = ({ id, media, name }) => {
       <div className="card">
         <div className="image-container">
           <img src={data} alt={name} />
-          <div className="info">
-            <h1>{name}</h1>
-          </div>
+          <h1 className="info">{name}</h1>
         </div>
       </div>
     </Link>
