@@ -1,10 +1,10 @@
 import '../styles/App.css';
-import PetContainer from '../Containers/SearchParamContainer';
+import SearchParamsContainer from '../Containers/SearchParamContainer';
 
 function App() {
   return (
     <div className="App">
-      <PetContainer />
+      <SearchParamsContainer />
     </div>
   );
 }
