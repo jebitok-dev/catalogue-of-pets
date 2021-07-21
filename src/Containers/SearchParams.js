@@ -34,27 +34,12 @@ const SearchParams = ({
     filterGender(petGender);
   }
 
-  const onFilterChange = (e) => {
-    const { value } = e.target;
-    updateFilter(value);
-  };
-
-  const onSizeChange = (e) => {
-    const { value } = e.target;
-    updateSize(value);
-  };
-
-  const onGenderChange = (e) => {
-    const { value } = e.target;
-    updateGender(value);
-  };
-
   useEffect(async () => {
     const { animals } = await petFinder.animal
       .search({
-        type: 'Dog',
-        size: 'Small',
-        gender: 'Male',
+        type: '',
+        size: '',
+        gender: '',
       })
       .then((data) => data.data);
 
@@ -76,9 +61,9 @@ const SearchParams = ({
           Animal
           <select
             value={petFilter}
-            onChange={onFilterChange}
+            onChange={(e) => updateFilter(e.target.value)}
           >
-            <option>Select</option>
+            <option disabled hidden defaultValue="">Select</option>
             {ANIMALS.map((option) => (
               <option
                 value={option}
@@ -93,9 +78,9 @@ const SearchParams = ({
           Size
           <select
             value={petSize}
-            onChange={onSizeChange}
+            onChange={(e) => updateSize(e.target.value)}
           >
-            <option>Select</option>
+            <option disabled hidden defaultValue="">Select</option>
             {sizes.map((option) => (
               <option
                 value={option}
@@ -110,9 +95,9 @@ const SearchParams = ({
           Gender
           <select
             value={petGender}
-            onChange={onGenderChange}
+            onChange={(e) => updateGender(e.target.value)}
           >
-            <option>Select</option>
+            <option disabled hidden defaultValue="">Select</option>
             {genders.map((option) => (
               <option
                 value={option}
