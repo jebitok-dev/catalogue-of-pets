@@ -129,14 +129,16 @@ img {
 header > a,
 #root > div > h1 {
   display: inline-block;
+
   /* height: 76px; */
   overflow: hidden;
 }
 
 .header {
   background-color: var(--yellow);
+
   /* text-align: center; */
-  font-size: 72px;
+  font-size: 40px;
   color: #fff;
 }
 
@@ -150,6 +152,7 @@ header > a,
 
 header a {
   color: var(--red);
+
   /* font-size: 3px; */
   text-decoration: none;
   font-weight: bold;
@@ -163,7 +166,7 @@ header {
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
   margin-bottom: 40px;
 }
 
@@ -267,9 +270,14 @@ header {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0 0 0;
+  }
+
+  .header {
+    font-size: 40px;
+    margin-bottom: 30px;
   }
 
   .search-params {
@@ -318,6 +326,11 @@ header {
 @media only screen and (max-width: 945px) {
   .search-params {
     width: 95%;
+  }
+
+  .header {
+    font-size: 30px;
+    margin-bottom: 30px;
   }
 
   .search-params-form {
