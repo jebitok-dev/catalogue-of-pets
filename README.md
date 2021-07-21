@@ -1,6 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Catalogue-of-Recipes Recreation
 # catalogue-of-Pets
 Building a single page application(SPA) that has two pages i.e list of pets and details about specific pet i.e Name, Breed, Location, and Description. User can filter through the list by animal type, gender and size, and select favorite Pet to Adopt. 
 
@@ -34,7 +33,9 @@ To get this project up and running locally, you must already have npm and nodejs
 ```
 
 - [Live Version](https://catalogue-of-pets.netlify.app/)
-- [Live Version Video](https://gist.github.com/jebitok-dev/9dc0fa9762318a26114972f209015977)
+- [React-Part Video](https://www.loom.com/share/90e8c180e034429aa44677fd5dbb941b)
+- [Redux/ React-Redux Part Video](https://www.loom.com/share/bb9dd88c7443446b934fb9f1bc51648a)
+- [Live Version Video](https://www.loom.com/share/9411e08943f943b6b45ad282d69dca24)
 
 ### Run Tests
  Tests for modules written using **Jest** and **React Testing Library**
