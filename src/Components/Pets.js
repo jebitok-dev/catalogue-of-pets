@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
 
 const Pets = ({ id, media, name }) => {
-  let data = '';
+  let data = 'http://placecorgi.com/300/300';
 
   if (media.length !== 0) {
     data = media[0].medium;
