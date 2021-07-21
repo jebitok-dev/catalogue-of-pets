@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link, Router } from '@reach/router';
+import { Router } from '@reach/router';
 import Details from '../Components/Details';
 import App from '../Components/App';
+import Navbar from '../Components/Navbar';
 
 const Route = () => (
   <div className="main-container">
-    <h1>
-      <Link to="/">Adopt Pets!</Link>
-    </h1>
+    <Navbar />
     <Router>
       <App path="/" />
       <Details path="/details/:id" />

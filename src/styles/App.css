@@ -129,9 +129,15 @@ img {
 header > a,
 #root > div > h1 {
   display: inline-block;
-  width: 279px;
-  height: 76px;
+  /* height: 76px; */
   overflow: hidden;
+}
+
+.header {
+  background-color: var(--yellow);
+  /* text-align: center; */
+  font-size: 72px;
+  color: #fff;
 }
 
 .pet h2 {
@@ -144,7 +150,7 @@ header > a,
 
 header a {
   color: var(--red);
-  font-size: 3px;
+  /* font-size: 3px; */
   text-decoration: none;
   font-weight: bold;
   display: block;
@@ -155,9 +161,10 @@ header {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  width: 1100px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px 0 0 0;
+  margin-bottom: 40px;
 }
 
 .details h2 {

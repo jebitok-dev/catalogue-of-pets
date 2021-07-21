@@ -52,7 +52,7 @@ const SearchParams = ({
   useEffect(async () => {
     const { animals } = await petFinder.animal
       .search({
-        type: 'Bird',
+        type: 'Dog',
         size: 'Small',
         gender: 'Male',
       })
