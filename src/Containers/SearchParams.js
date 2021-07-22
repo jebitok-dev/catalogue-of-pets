@@ -5,15 +5,11 @@ import Results from '../Components/Results';
 import petFinder from '../Helpers/Api';
 
 const SearchParams = ({
-  pets = [], fetchPets, filterPets, filter, filterSize, size, gender, filterGender,
+  pets = [], fetchPets, filterPets, filter,
 }) => {
-  const [petSize, updateSize] = useState(size);
   const [petFilter, updateFilter] = useState(filter);
-  const [petGender, updateGender] = useState(gender || 'All');
   const [setPets, updatePets] = useState(pets || []);
 
-  const sizes = ['Small', 'Medium', 'Large'];
-  const genders = ['Male', 'Female'];
   const capitalize = ([first, ...rest]) =>
         first.toUpperCase() + rest.join('').toLowerCase(); // eslint-disable-line
 
@@ -21,8 +17,6 @@ const SearchParams = ({
     const { animals } = await petFinder.animal
       .search({
         type: petFilter,
-        gender: petGender,
-        size: petSize,
       })
       .then((data) => data.data)
       .catch((error) => error);
@@ -30,8 +24,6 @@ const SearchParams = ({
     fetchPets(animals);
     updatePets(animals);
     filterPets(petFilter);
-    filterSize(petSize);
-    filterGender(petGender);
   }
 
   useEffect(async () => {
@@ -74,40 +66,6 @@ const SearchParams = ({
             ))}
           </select>
         </label>
-        <label htmlFor="size">
-          Size
-          <select
-            value={petSize}
-            onChange={(e) => updateSize(e.target.value)}
-          >
-            <option disabled hidden defaultValue="">Select</option>
-            {sizes.map((option) => (
-              <option
-                value={option}
-                key={option}
-              >
-                {option}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label htmlFor="gender">
-          Gender
-          <select
-            value={petGender}
-            onChange={(e) => updateGender(e.target.value)}
-          >
-            <option disabled hidden defaultValue="">Select</option>
-            {genders.map((option) => (
-              <option
-                value={option}
-                key={option}
-              >
-                {option}
-              </option>
-            ))}
-          </select>
-        </label>
         <button type="submit">Submit</button>
       </form>
       <Results pets={setPets} />
@@ -120,10 +78,6 @@ SearchParams.propTypes = {
   fetchPets: PropTypes.func,
   filter: PropTypes.string,
   filterPets: PropTypes.func,
-  filterSize: PropTypes.func,
-  filterGender: PropTypes.func,
-  size: PropTypes.string,
-  gender: PropTypes.string,
 };
 
 SearchParams.defaultProps = {
@@ -131,10 +85,6 @@ SearchParams.defaultProps = {
   fetchPets: null,
   filter: 'All',
   filterPets: null,
-  filterSize: null,
-  filterGender: null,
-  size: 'All',
-  gender: 'All',
 };
 
 export default SearchParams;
