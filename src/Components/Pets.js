@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
 
 const Pets = ({ id, media, name }) => {
-  let data = 'http://placecorgi.com/300/300';
+  let avatar = 'http://placecorgi.com/300/300';
 
   if (media.length !== 0) {
-    data = media[0].medium;
+    avatar = media[0].medium;
   }
 
   return (
     <Link to={`/details/${id}`}>
       <div className="card">
         <div className="image-container">
-          <img src={data} alt={name} />
+          <img src={avatar} alt="" />
           <h1 className="info">{name}</h1>
         </div>
       </div>

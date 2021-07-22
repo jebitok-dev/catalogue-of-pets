@@ -34,10 +34,10 @@ const Details = ({ id }) => {
     );
   }
 
-  let data = 'http://placecorgi.com/300/300';
+  let avatar = 'http://placecorgi.com/300/300';
 
   if (media.length !== 0) {
-    data = media[0].large;
+    avatar = media[0].large;
   }
 
   const home = () => navigate('/');
@@ -46,7 +46,7 @@ const Details = ({ id }) => {
   return (
     <div className="details">
       <div className="image-container">
-        <img src={data} alt="" />
+        <img src={avatar} alt="" />
       </div>
       <div className="details-section">
         <h1>{name}</h1>
