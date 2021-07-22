@@ -46,7 +46,7 @@ const Details = ({ id }) => {
   return (
     <div className="details">
       <div className="image-container">
-        <img src={avatar} alt="" />
+        <img onError={avatar} src={avatar} alt="" />
       </div>
       <div className="details-section">
         <h1>{name}</h1>

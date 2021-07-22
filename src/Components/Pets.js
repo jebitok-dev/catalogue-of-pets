@@ -13,7 +13,7 @@ const Pets = ({ id, media, name }) => {
     <Link to={`/details/${id}`}>
       <div className="card">
         <div className="image-container">
-          <img src={avatar} alt="" />
+          <img onError={avatar} src={avatar} alt="" />
           <h1 className="info">{name}</h1>
         </div>
       </div>
