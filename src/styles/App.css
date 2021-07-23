@@ -84,6 +84,7 @@ img {
   width: 300px;
   display: block;
   border-radius: 6px 6px 0 0;
+  text-indent: -10000px;
 }
 
 .pet h1 {
