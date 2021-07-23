@@ -40,7 +40,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--yellow);
 }
 
 .details {
@@ -181,6 +180,7 @@ header {
   padding: 16px;
   display: flex;
   align-items: center;
+  background-color: var(--yellow);
 }
 
 .search img {
