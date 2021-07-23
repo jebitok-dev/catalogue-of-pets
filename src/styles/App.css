@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: var(--yellow);
 }
 
 .details {
@@ -85,7 +86,6 @@ img {
   display: block;
   border-radius: 6px 6px 0 0;
   text-indent: -10000px;
-  background-image: url(http://placecorgi.com/300/300);
 }
 
 .pet h1 {
